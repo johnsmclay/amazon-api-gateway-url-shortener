@@ -83,6 +83,12 @@ Allow SAM CLI IAM role creation [Y/n]:
 Save arguments to samconfig.toml [Y/n]:
 ```
 
+**NOTE:** you will need to clone the repo, cd to the "client" folder, run an `npm install` so that a package-lock.json file is created and then commit/push that file.  Otherwise you will get the following during your build in Amplify:
+
+```
+ERR! cipm can only install packages with an existing package-lock.json or npm-shrinkwrap.json with lockfileVersion >= 1. Run an install with npm@5 or later to generate it, then try again.
+```
+
 SAM will then deploy the AWS CloudFormation stack to your AWS account and provide required outputs for the included client.
 
 After the first deploy you may re-deploy using `sam deploy` or redeploy with different options using `sam deploy -g`.
